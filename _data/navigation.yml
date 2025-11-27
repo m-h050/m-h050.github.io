@@ -37,18 +37,19 @@ categories:
         category: "crypto"
         url: /categories/crypto/
 
-  - title: "Security"
-    category: "security"
+  - title: "SEC"
+    category: "sec"
     children:
       - title: "1"
-        category: "security-1"
-        url: /categories/security-1/
+        category: "sec-1"
+        url: /categories/sec-1/
       - title: "2"
         category: "security-2"
-        url: /categories/security-2/
+        url: /categories/sec-2/
       - title: "3"
         category: "security-3"
-        url: /categories/security-3/
+        url: /categories/sec-3/
+
 
 
 
