@@ -1,9 +1,10 @@
 ---
-title: "Categories1"
+title: "CTF"
 layout: category
-permalink: /categories/categories1/
+permalink: /categories/CTF/
 author_profile: true
 taxonomy: Categories1
 sidebar:
   nav: "categories"
 ---
+
