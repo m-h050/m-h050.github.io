@@ -19,13 +19,14 @@ main:
 # 2022.02.15 sidebar update : simple ver.
 categories:
   - title: "CTF"
-    url: /categories/CTF/
+    url: /categories/#CTF/
   - title: "Web"
-    url: /categories/Web/
+    url: /categories/#Web/
   - title: "3"
     url: /categories/categories3/
   - title: "4"
     url: /categories/categories4/
+
 
 
 
