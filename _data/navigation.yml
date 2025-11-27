@@ -36,6 +36,9 @@ categories:
       - title: "Crypto"
         category: "crypto"
         url: /categories/crypto/
+      - title: "Misc"
+        category: "misc"
+        url: /categories/misc/
 
   - title: "SEC"
     category: "sec"
@@ -49,6 +52,7 @@ categories:
       - title: "3"
         category: "security-3"
         url: /categories/sec-3/
+
 
 
 
