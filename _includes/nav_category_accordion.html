@@ -1,38 +1,53 @@
 {% assign nav_key = include.nav %}
 {% assign links = site.data.navigation[nav_key] %}
 
-{%- assign is_home = page.url == "/" or page.layout == "home" -%}
-{%- assign is_post = page.collection == "posts" or page.layout == "single" -%}
-{%- assign is_category_area = page.url contains "/categories/" or page.layout == "category" or page.layout == "categories" -%}
-{%- assign open_ctf = false -%}
-{%- if is_post or is_category_area -%}
-  {%- assign open_ctf = true -%}
-{%- endif -%}
-{%- if is_home -%}
-  {%- assign open_ctf = false -%}
-{%- endif -%}
+{% assign should_open_ctf = false %}
+{% if page.layout == "home" %}
+  {% assign should_open_ctf = false %}
+{% elsif page.url contains "/categories/" or page.layout == "single" %}
+  {% assign should_open_ctf = true %}
+{% endif %}
 
-<nav class="nav__list">
-  <ul class="nav__items">
-    {% for link in links %}
-      <li class="nav__item">
-        {% if link.children %}
-          <details class="nav__details" {% if link.title == "CTF" and open_ctf %}open{% endif %}>
-            <summary class="nav__summary">{{ link.title }}</summary>
-            <ul class="nav__sublist">
-              {% for child in link.children %}
-                <li class="nav__subitem">
-                  <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          </details>
-        {% else %}
-          <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
+<ul class="nav__items">
+  {% for link in links %}
+    {% assign key = link.category | default: link.title | downcase %}
+    {% assign count = site.categories[key] | size %}
+
+    <li class="nav__item">
+      {% if link.children %}
+        <details class="nav__details" {% if link.title == "CTF" and should_open_ctf %}open{% endif %}>
+          <summary class="nav__summary">
+            <span class="nav__label">{{ link.title }}</span>
+            <span class="nav__count">{{ count }}</span>
+          </summary>
+
+          <ul class="nav__sublist">
+            {% for child in link.children %}
+              {% assign ckey = child.category | default: child.title | downcase %}
+              {% assign ccount = site.categories[ckey] | size %}
+              {% assign is_active = false %}
+              {% if page.url == child.url or page.url == child.url | append:"/" %}
+                {% assign is_active = true %}
+              {% endif %}
+
+              <li class="nav__subitem">
+                <a href="{{ child.url | relative_url }}" class="{% if is_active %}nav__active{% endif %}">
+                  <span class="nav__label">{{ child.title }}</span>
+                  <span class="nav__count">{{ ccount }}</span>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </details>
+      {% else %}
+        <a href="{{ link.url | relative_url }}">
+          <span class="nav__label">{{ link.title }}</span>
+          <span class="nav__count">{{ count }}</span>
+        </a>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
 
 
