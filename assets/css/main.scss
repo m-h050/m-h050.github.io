@@ -120,7 +120,29 @@
   box-shadow: 0 0 0 3px rgba(0,0,0,.08);
 }
 
+/* sidebar nav 기본 리스트/마커 제거 */
+.sidebar .nav__items,
+.sidebar .nav__items li,
+.sidebar .nav__sublist,
+.sidebar .nav__sublist li {
+  list-style: none !important;
+}
+
+.sidebar .nav__items,
+.sidebar .nav__sublist {
+  margin: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* details summary 기본 마커 제거 (브라우저 삼각형/점) */
+.sidebar details > summary {
+  list-style: none;
+}
+.sidebar details > summary::-webkit-details-marker {
+  display: none;
+}
 
 
    
+
 
