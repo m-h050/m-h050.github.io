@@ -3,12 +3,11 @@ title: "[CTF/Writeups] cor_2025_web/yamlquiz"
 excerpt: "corCTF 2025 web/yamlquiz writeups"
 
 categories: # 카테고리 설정
-  - ctf
   - web
 tags: # 포스트 태그
   - [CTF, writeups, corctf]
 
-permalink: /CTF/cor_2025_web_yamlquiz/ # 포스트 URL
+permalink: /ctf/web/cor_2025_web_yamlquiz/ # 포스트 URL
 
 toc: true # 우측에 본문 목차 네비게이션 생성
 toc_sticky: true # 본문 목차 네비게이션 고정 여부
