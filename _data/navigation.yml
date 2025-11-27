@@ -19,15 +19,22 @@ main:
 # 2022.02.15 sidebar update : simple ver.
 categories:
   - title: "CTF"
+    category: "ctf"
     children:
       - title: "Web"
-        url: /categories/web
+        category: "web"
+        url: /categories/web/
       - title: "Pwn"
-        url: /categories/pwn
+        category: "pwn"
+        url: /categories/pwn/
       - title: "Rev"
-        url: /categories/rev
+        category: "rev"
+        url: /categories/rev/
       - title: "Forensic"
-        url: /categories/forensic
+        category: "forensic"
+        url: /categories/forensic/
+
+
 
 
 
