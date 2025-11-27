@@ -26,9 +26,101 @@
    src: url(/assets/css/fonts/RIDIBatang.otf);
 }
 
-.nav__summary { cursor: pointer; font-weight: 600; }
-.nav__sublist { margin-top: .3rem; padding-left: 1rem; }
-.nav__subitem { margin: .15rem 0; }
+/* --- Sidebar accordion nav (CTF -> Web/Pwn/...) --- */
+.sidebar .nav__list {
+  margin-top: 1rem;
+}
+
+.sidebar .nav__items,
+.sidebar .nav__sublist {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Top-level item spacing */
+.sidebar .nav__item {
+  margin: 0.25rem 0;
+}
+
+/* details box */
+.sidebar .nav__details {
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  padding: 0.45rem 0.6rem;
+  background: rgba(255,255,255,.45);
+  backdrop-filter: blur(6px);
+}
+
+/* summary (CTF) */
+.sidebar .nav__summary {
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 1.08rem;   /* ✅ 글씨 크게 */
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+}
+
+/* remove default marker */
+.sidebar .nav__details > summary {
+  list-style: none;
+}
+.sidebar .nav__details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* custom chevron */
+.sidebar .nav__summary::before {
+  content: "▸";
+  font-size: 1.05rem;
+  opacity: 0.85;
+  transform: translateY(-1px);
+  transition: transform 0.15s ease;
+}
+
+.sidebar .nav__details[open] .nav__summary::before {
+  transform: rotate(90deg) translateX(1px);
+}
+
+/* sub list (Web/Pwn/...) */
+.sidebar .nav__sublist {
+  margin-top: 0.5rem;
+  padding-left: 1.1rem;
+}
+
+.sidebar .nav__subitem {
+  margin: 0.15rem 0;
+}
+
+/* link style */
+.sidebar .nav__subitem a,
+.sidebar .nav__item > a {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 0.32rem 0.5rem;
+  font-size: 1.0rem;     /* ✅ 하위도 살짝 크게 */
+  opacity: 0.95;
+  transition: transform .12s ease, background-color .12s ease;
+}
+
+.sidebar .nav__subitem a:hover,
+.sidebar .nav__item > a:hover {
+  background: rgba(0,0,0,.06);
+  transform: translateX(2px);
+}
+
+/* active hash link 느낌(선택) */
+.sidebar .nav__subitem a:focus,
+.sidebar .nav__item > a:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,0,0,.08);
+}
+
 
 
    
+
