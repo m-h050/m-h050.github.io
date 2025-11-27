@@ -18,14 +18,15 @@ main:
 # sidebar navigation (categories)
 # 2022.02.15 sidebar update : simple ver.
 categories:
-  - title: "Writeups"
-    url: /categories/Writeups/
-  - title: "CTF/Web"
-    url: /categories/CTF/Web/
-  - title: "Categories3"
+  - title: "CTF"
+    url: /categories/CTF/
+  - title: "Web"
+    url: /categories/Web/
+  - title: "3"
     url: /categories/categories3/
-  - title: "Categories4"
+  - title: "4"
     url: /categories/categories4/
+
 
 
 
