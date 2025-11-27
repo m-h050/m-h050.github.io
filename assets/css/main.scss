@@ -267,6 +267,22 @@
   text-overflow: ellipsis;
 }
    
+/* 오른쪽 TOC(온디스페이지) ... 없애고 줄바꿈 */
+.sidebar__right .toc__menu a,
+.toc__menu a {
+  white-space: normal !important;      /* 줄바꿈 허용 */
+  overflow: visible !important;        /* 숨김 해제 */
+  text-overflow: unset !important;     /* ... 해제 */
+  word-break: keep-all;                /* 한글 단어 안 쪼개기 */
+  overflow-wrap: anywhere;             /* 너무 길면 어쩔 수 없이 줄바꿈 */
+  line-height: 1.25;
+}
+
+/* 너무 커서 카드가 답답하면 살짝만 줄이기 */
+.sidebar__right .toc__menu a {
+  font-size: 0.95rem;
+}
+
 
 
 
