@@ -21,13 +21,14 @@ categories:
   - title: "CTF"
     children:
       - title: "Web"
-        url: /categories/#web
+        url: /categories/web
       - title: "Pwn"
-        url: /categories/#pwn
+        url: /categories/pwn
       - title: "Rev"
-        url: /categories/#rev
+        url: /categories/rev
       - title: "Forensic"
-        url: /categories/#forensic
+        url: /categories/forensic
+
 
 
 
