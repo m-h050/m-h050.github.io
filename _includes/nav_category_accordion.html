@@ -1,15 +1,23 @@
 {% assign nav_key = include.nav %}
 {% assign links = site.data.navigation[nav_key] %}
 
+{%- assign is_home = page.url == "/" or page.layout == "home" -%}
+{%- assign is_post = page.collection == "posts" or page.layout == "single" -%}
+{%- assign is_category_area = page.url contains "/categories/" or page.layout == "category" or page.layout == "categories" -%}
+{%- assign open_ctf = false -%}
+{%- if is_post or is_category_area -%}
+  {%- assign open_ctf = true -%}
+{%- endif -%}
+{%- if is_home -%}
+  {%- assign open_ctf = false -%}
+{%- endif -%}
+
 <nav class="nav__list">
   <ul class="nav__items">
     {% for link in links %}
       <li class="nav__item">
         {% if link.children %}
-        {% assign is_categories_page = page.url == "/categories/" or page.layout == "categories" %}
-        {% assign in_ctf_child = page.categories contains "web" or page.categories contains "pwn" or page.categories contains "rev" or page.categories contains "forensic" %}
-        <details class="nav__details" {% if link.title == "CTF" and (is_categories_page or in_ctf_child) %}open{% endif %}>
-
+          <details class="nav__details" {% if link.title == "CTF" and open_ctf %}open{% endif %}>
             <summary class="nav__summary">{{ link.title }}</summary>
             <ul class="nav__sublist">
               {% for child in link.children %}
@@ -26,4 +34,5 @@
     {% endfor %}
   </ul>
 </nav>
+
 
