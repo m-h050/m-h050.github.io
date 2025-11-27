@@ -1,24 +1,26 @@
-# {% assign links = include.nav %}
 {% assign nav_key = include.nav %}
 {% assign links = site.data.navigation[nav_key] %}
 
-<ul class="nav__list">
-  {% for link in links %}
-    <li class="nav__item">
-      {% if link.children %}
-        <details class="nav__details">
-          <summary class="nav__summary">{{ link.title }}</summary>
-          <ul class="nav__sublist">
-            {% for child in link.children %}
-              <li class="nav__subitem">
-                <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        </details>
-      {% else %}
-        <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
+<nav class="nav__list">
+  <ul class="nav__items">
+    {% for link in links %}
+      <li class="nav__item">
+        {% if link.children %}
+          <details class="nav__details">
+            <summary class="nav__summary">{{ link.title }}</summary>
+            <ul class="nav__sublist">
+              {% for child in link.children %}
+                <li class="nav__subitem">
+                  <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </details>
+        {% else %}
+          <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+
