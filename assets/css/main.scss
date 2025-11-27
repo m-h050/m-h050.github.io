@@ -234,7 +234,40 @@
   padding-left: .95rem;
 }
 
+/* ===== TOC size down (prevent wrapping) ===== */
+.sidebar__right .toc {
+  padding: .75rem .85rem;   /* 박스 내부 여백 줄이기 */
+}
+
+.sidebar__right .toc .nav__title {
+  font-size: 1.02rem;       /* On this page 제목 */
+  margin-bottom: .55rem;
+}
+
+.sidebar__right .toc__menu {
+  font-size: .95rem;        /* 항목 글씨 크기 */
+  line-height: 1.35;        /* 줄간격 */
+}
+
+.sidebar__right .toc__menu a {
+  padding: .18rem .2rem;    /* 항목 padding 줄이기 */
+  border-radius: 9px;
+}
+
+/* 들여쓰기(소제목)도 살짝 줄이기 */
+.sidebar__right .toc__menu ul {
+  padding-left: .85rem;
+  border-left-width: 2px;
+}
+
+/* 1줄로 유지(너무 길면 ... 처리) */
+.sidebar__right .toc__menu a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
    
+
 
 
 
