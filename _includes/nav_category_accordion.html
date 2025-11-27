@@ -6,7 +6,9 @@
     {% for link in links %}
       <li class="nav__item">
         {% if link.children %}
-          <details class="nav__details">
+          {% assign is_categories_page = page.url == "/categories/" or page.layout == "categories" %}
+          <details class="nav__details" {% if link.title == "CTF" and is_categories_page %}open{% endif %}>
+
             <summary class="nav__summary">{{ link.title }}</summary>
             <ul class="nav__sublist">
               {% for child in link.children %}
