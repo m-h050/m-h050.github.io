@@ -3,6 +3,7 @@ title: "[CTF/Writeups] cor_2025_web/yamlquiz"
 excerpt: "corCTF 2025 web/yamlquiz writeups"
 
 categories: # 카테고리 설정
+  - ctf
   - web
 tags: # 포스트 태그
   - [CTF, writeups, corctf]
