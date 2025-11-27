@@ -1,4 +1,6 @@
-{% assign links = include.nav %}
+# {% assign links = include.nav %}
+{% assign nav_key = include.nav %}
+{% assign links = site.data.navigation[nav_key] %}
 
 <ul class="nav__list">
   {% for link in links %}
