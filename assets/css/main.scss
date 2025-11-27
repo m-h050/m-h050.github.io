@@ -142,7 +142,99 @@
   display: none;
 }
 
+/* =========================
+   Right sidebar TOC styling
+   (match left accordion vibe)
+   ========================= */
+
+/* TOC 전체 박스 */
+.sidebar__right .toc {
+  padding: 1rem 1rem;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 16px;
+  background: rgba(255,255,255,.85);
+  box-shadow: 0 8px 22px rgba(0,0,0,.06);
+  backdrop-filter: blur(6px);
+}
+
+/* "On this page" 타이틀 */
+.sidebar__right .toc .nav__title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: 0 0 .75rem 0;
+  letter-spacing: .2px;
+}
+
+/* 목록 전체 */
+.sidebar__right .toc__menu {
+  font-size: 1.02rem;     /* 글씨 크기 */
+  line-height: 1.55;
+  margin: 0;
+  padding: 0;
+}
+
+/* 기본 점 제거 + 정렬 */
+.sidebar__right .toc__menu,
+.sidebar__right .toc__menu ul,
+.sidebar__right .toc__menu li {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* 항목 */
+.sidebar__right .toc__menu > li {
+  padding: .25rem 0;
+}
+
+/* 링크 스타일 */
+.sidebar__right .toc__menu a {
+  display: block;
+  padding: .28rem .25rem;
+  border-radius: 10px;
+  font-weight: 650;
+  opacity: .92;
+  transition: transform .08s ease, background .15s ease, opacity .15s ease;
+}
+
+/* hover */
+.sidebar__right .toc__menu a:hover {
+  background: rgba(0,0,0,.04);
+  transform: translateX(2px);
+  opacity: 1;
+  text-decoration: none;
+}
+
+/* 활성(현재 스크롤 위치) 강조 */
+.sidebar__right .toc__menu a.active {
+  background: rgba(0,0,0,.06);
+  font-weight: 800;
+}
+
+/* 2depth(소제목) 들여쓰기 + 왼쪽 포인트 라인 */
+.sidebar__right .toc__menu ul {
+  margin-top: .35rem;
+  padding-left: 1.05rem;
+  border-left: 3px solid rgba(255, 138, 0, .35); /* 왼쪽 느낌(오렌지 라인) */
+}
+
+.sidebar__right .toc__menu ul li {
+  margin: .12rem 0;
+}
+
+.sidebar__right .toc__menu ul a {
+  font-size: .98rem;
+  font-weight: 600;
+  padding: .22rem .2rem;
+}
+
+/* 3depth 더 깊게 */
+.sidebar__right .toc__menu ul ul {
+  border-left-color: rgba(255, 138, 0, .25);
+  padding-left: .95rem;
+}
 
    
+
 
 
