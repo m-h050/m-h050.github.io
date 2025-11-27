@@ -33,6 +33,22 @@ categories:
       - title: "Forensic"
         category: "forensic"
         url: /categories/forensic/
+      - title: "Crypto"
+        category: "crypto"
+        url: /categories/crypto/
+
+  - title: "Security"
+    category: "security"
+    children:
+      - title: "1"
+        category: "security-1"
+        url: /categories/security-1/
+      - title: "2"
+        category: "security-2"
+        url: /categories/security-2/
+      - title: "3"
+        category: "security-3"
+        url: /categories/security-3/
 
 
 
