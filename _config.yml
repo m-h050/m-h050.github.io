@@ -283,6 +283,16 @@ defaults:
       sidebar:
         nav: "categories"
 
+  # _pages (카테고리/페이지들에도 사이드바 + 프로필 적용)
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      author_profile: true
+      sidebar:
+        nav: "categories"
+
+
 
 
 
