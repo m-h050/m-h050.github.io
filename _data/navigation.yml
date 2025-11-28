@@ -18,6 +18,19 @@ main:
 # sidebar navigation (categories)
 # 2022.02.15 sidebar update : simple ver.
 categories:
+  - title: "SEC"
+    category: "sec"
+    children:
+      - title: "1"
+        category: "sec-1"
+        url: /categories/sec-1/
+      - title: "2"
+        category: "security-2"
+        url: /categories/sec-2/
+      - title: "3"
+        category: "security-3"
+        url: /categories/sec-3/
+        
   - title: "CTF"
     category: "ctf"
     children:
@@ -39,19 +52,6 @@ categories:
       - title: "Misc"
         category: "misc"
         url: /categories/misc/
-
-  - title: "SEC"
-    category: "sec"
-    children:
-      - title: "1"
-        category: "sec-1"
-        url: /categories/sec-1/
-      - title: "2"
-        category: "security-2"
-        url: /categories/sec-2/
-      - title: "3"
-        category: "security-3"
-        url: /categories/sec-3/
 
 
 
