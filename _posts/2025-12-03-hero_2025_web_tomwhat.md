@@ -168,10 +168,6 @@ http://dyn01.heroctf.fr:10590/examples/servlets/servlet/SessionExample?dataname=
 http://dyn01.heroctf.fr:10590/dark/
 ```
 
-다음 문구가 보이면 성공:
-
-- `Welcome to the dark side Darth darth_sidious`
-
 ![image.png](/assets/images/ctf/hero2025/web/tomwhat/heroctf_web_tomwhat-003.png)
 
 ---
@@ -181,8 +177,6 @@ http://dyn01.heroctf.fr:10590/dark/
 ```
 http://dyn01.heroctf.fr:10590/dark/admin
 ```
-
-플래그가 출력됨.
 
 ![image.png](/assets/images/ctf/hero2025/web/tomwhat/heroctf_web_tomwhat-004.png)
 
