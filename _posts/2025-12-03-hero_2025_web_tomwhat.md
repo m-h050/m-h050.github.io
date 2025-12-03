@@ -49,7 +49,7 @@ last_modified_at: 2025-12-03 # 최종 수정 날짜
 
 ## 📦 2) 파일 분석
 
-### 2-1) 애플리케이션 동작 요약
+### 2-1) 동작 요약
 
  ✅ `/light/`
 
@@ -68,7 +68,7 @@ last_modified_at: 2025-12-03 # 최종 수정 날짜
 
 ---
 
-### 2-2) 진짜 핵심: 세션 공유 설정
+### 2-2) 세션 공유 설정
 
 제공 파일의 실행 스크립트(`run.sh`)에서 중요한 설정이 들어감
 
@@ -92,14 +92,14 @@ last_modified_at: 2025-12-03 # 최종 수정 날짜
 > **/light에서 세션에 값을 못 넣으면, /light 말고 다른 곳에서 세션에 넣으면 된다.**
 > 
 
- Step 1) Light에서 일반 방법이 막혀있음 확인
+  Step 1) Light에서 일반 방법이 막혀있음 확인
 
 - `/light/`에서 `darth_sidious` 입력 → Forbidden
 - 즉, LightServlet 경로로는 세션에 `username=darth_sidious` 저장 불가
 
 ---
 
- Step 2) “다른 앱에서 세션을 조작할 수 있나?”를 찾기
+  Step 2) “다른 앱에서 세션을 조작할 수 있나?”를 찾기
 
 Tomcat은 기본적으로 `/examples`라는 예제 앱을 포함할 수 있고, 거기에 **세션 값 저장 기능(SessionExample)** 이 있다.
 
@@ -146,7 +146,7 @@ http://dyn01.heroctf.fr:10590/light/
 
 ---
 
- ✅ 2. 세션에 username을 강제로 주입 (핵심)
+ ✅ 2. 세션에 username을 강제로 주입
 
 아래 URL을 그대로 호출:
 
