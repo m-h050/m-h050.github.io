@@ -51,17 +51,17 @@ last_modified_at: 2025-12-03 # 최종 수정 날짜
 
 ### 2-1) 애플리케이션 동작 요약
 
-### ✅ `/light/`
+ ✅ `/light/`
 
 - 사용자가 입력한 `username`을 세션에 저장함
 - 단, `darth_sidious`는 **입력 차단**
 
-### ✅ `/dark/`
+ ✅ `/dark/`
 
 - 세션의 `username`이 있으면 화면에 출력함
 - 링크로 `/dark/admin` 이동 가능
 
-### ✅ `/dark/admin`
+ ✅ `/dark/admin`
 
 - 세션의 `username`이 `darth_sidious`이면 플래그 출력
 - 아니면 **Access denied**
@@ -92,14 +92,14 @@ last_modified_at: 2025-12-03 # 최종 수정 날짜
 > **/light에서 세션에 값을 못 넣으면, /light 말고 다른 곳에서 세션에 넣으면 된다.**
 > 
 
-### Step 1) Light에서 일반 방법이 막혀있음 확인
+ Step 1) Light에서 일반 방법이 막혀있음 확인
 
 - `/light/`에서 `darth_sidious` 입력 → Forbidden
 - 즉, LightServlet 경로로는 세션에 `username=darth_sidious` 저장 불가
 
 ---
 
-### Step 2) “다른 앱에서 세션을 조작할 수 있나?”를 찾기
+ Step 2) “다른 앱에서 세션을 조작할 수 있나?”를 찾기
 
 Tomcat은 기본적으로 `/examples`라는 예제 앱을 포함할 수 있고, 거기에 **세션 값 저장 기능(SessionExample)** 이 있다.
 
@@ -112,7 +112,7 @@ Tomcat은 기본적으로 `/examples`라는 예제 앱을 포함할 수 있고, 
 
 ---
 
-### Step 3) Cross-Context 세션 공유 확인
+ Step 3) Cross-Context 세션 공유 확인
 
 `sessionCookiePath="/"` 설정 때문에:
 
@@ -126,7 +126,7 @@ Tomcat은 기본적으로 `/examples`라는 예제 앱을 포함할 수 있고, 
 
 ---
 
-### ✅ 0. 준비
+ ✅ 0. 준비
 
 브라우저로 아래 인스턴스 접속:
 
@@ -136,7 +136,7 @@ http://dyn01.heroctf.fr:10590/
 
 ---
 
-### ✅ 1. (확인) /light에서 darth_sidious가 막히는지 확인
+ ✅ 1. (확인) /light에서 darth_sidious가 막히는지 확인
 
 ```
 http://dyn01.heroctf.fr:10590/light/
@@ -146,7 +146,7 @@ http://dyn01.heroctf.fr:10590/light/
 
 ---
 
-### ✅ 2. 세션에 username을 강제로 주입 (핵심)
+ ✅ 2. 세션에 username을 강제로 주입 (핵심)
 
 아래 URL을 그대로 호출:
 
@@ -162,7 +162,7 @@ http://dyn01.heroctf.fr:10590/examples/servlets/servlet/SessionExample?dataname=
 
 ---
 
-### ✅ 3. /dark에서 값이 반영되는지 확인
+ ✅ 3. /dark에서 값이 반영되는지 확인
 
 ```
 http://dyn01.heroctf.fr:10590/dark/
@@ -172,7 +172,7 @@ http://dyn01.heroctf.fr:10590/dark/
 
 ---
 
-### ✅ 4. /dark/admin에서 플래그 획득
+ ✅ 4. /dark/admin에서 플래그 획득
 
 ```
 http://dyn01.heroctf.fr:10590/dark/admin
