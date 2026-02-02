@@ -1,3 +1,12 @@
+
+
+-------
+title: "사용 방법"
+permalink: /guide/
+layout: single
+-------
+
+
 ## 🦥 `Minimal Mistakes theme customized by choiiis`
 
 📎 **블로그 바로 가기**
