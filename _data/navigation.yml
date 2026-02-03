@@ -1,7 +1,9 @@
 # main links
 main:
   - title: "Home"
-    url: https://m-h050.github.io/
+    url: /
+  - title: "Guide"
+    url: /guide/
 
  # - title: "About"
  #   url: /about/
@@ -52,6 +54,7 @@ categories:
       - title: "Misc"
         category: "misc"
         url: /categories/misc/
+
 
 
 
