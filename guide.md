@@ -3,12 +3,11 @@ title: "사용 방법"
 permalink: /guide/
 layout: single
 ---
-## 🦥 `Minimal Mistakes theme customized by choiiis`
 
+## 🦥 `Minimal Mistakes theme customized by choiiis`
+...
 📎 **블로그 바로 가기**
 [`https://choiiis.github.io/`](https://choiiis.github.io/)
-
----
 
 fork 해서 사용하시기 편하게 변경해서 새로 올려봅니다.  
 편하게 사용하시고, fork 하실 때 `star` 하나만 눌러주세용 :)
