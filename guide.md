@@ -1,5 +1,3 @@
-
-
 -------
 title: "사용 방법"
 permalink: /guide/
