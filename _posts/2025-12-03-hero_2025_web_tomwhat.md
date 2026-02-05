@@ -1,6 +1,6 @@
 ---
-title: "[CTF/Writeups] hero_2025_web_tomwhat"
-excerpt: "HeroCTF 2025 web_tomwhat writeups"
+title: "[CTF/Writeups] 2025_hero_web_tomwhat"
+excerpt: "2025 HeroCTF web_tomwhat writeups"
 
 categories: # 카테고리 설정
   - ctf
