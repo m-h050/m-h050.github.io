@@ -282,6 +282,8 @@ defaults:
       related: true
       sidebar:
         nav: "categories"
+      toc: false
+      toc_sticky: false
 
   # _pages (카테고리/페이지들에도 사이드바 + 프로필 적용)
   - scope:
@@ -291,6 +293,7 @@ defaults:
       author_profile: true
       sidebar:
         nav: "categories"
+
 
 
 
