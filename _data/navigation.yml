@@ -2,8 +2,8 @@
 main:
   - title: "Home"
     url: /
-  - title: "Guide"
-    url: /guide/
+ # - title: "Guide"
+ #   url: /guide/
 
  # - title: "About"
  #   url: /about/
@@ -54,6 +54,7 @@ categories:
       - title: "Misc"
         category: "misc"
         url: /categories/misc/
+
 
 
 
