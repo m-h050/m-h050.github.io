@@ -329,6 +329,9 @@
   background: rgba(0,0,0,.06);
 }
 
+/* force hide TOC */
+.sidebar__right .toc { display: none !important; }
+
 
 
 
