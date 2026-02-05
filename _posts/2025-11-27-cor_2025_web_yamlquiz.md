@@ -1,6 +1,6 @@
 ---
-title: "[CTF/Writeups] cor_2025_web/yamlquiz"
-excerpt: "corCTF 2025 web/yamlquiz writeups"
+title: "[CTF/Writeups] 2025_cor_web/yamlquiz"
+excerpt: "2025 corCTF web/yamlquiz writeups"
 
 categories: # 카테고리 설정
   - ctf
